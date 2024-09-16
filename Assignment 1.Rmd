@@ -55,14 +55,12 @@ sampleSD = sd(college_salary)
 sample_count = length(college_salary)
 
 #t-value
-
 tvalue = ((sampleMean - popMean)/(sampleSD/(sqrt(sample_count))))
-
 print(tvalue)
 
-
-
 ```
+
+
 -------------------------------------------------------------------------------------------
 c) (5 points) What type of statistical error could you potentially be making after your decision in part a? Justify.
 
@@ -73,9 +71,10 @@ Question 2 (60 points)
 Researchers at a Zoo wish to test the efficacy of a new program intended to reduce the length of labor in female pumas (i.e., mountain lions). From historical records, researchers know that it takes an average of 60 minutes for a female puma to give birth to a litter. The new program was tested with 25 puma mothers that gave birth. The data of the length of labor (in minutes) for these 25 puma mothers is shown below.
 
 ```{r}
-
 puma_labor= c(56, 51, 62, 58, 59, 59, 56, 56, 54, 47, 51, 64, 48, 59, 59, 53, 61, 55, 57, 63, 55, 56, 62, 57, 55)
 ```
+
+
 ---
 a) (10 points) How many standard deviations from the sample average is the most extreme value in the sample? Show your work and make sure you provide a written answer to the question.
 
@@ -93,7 +92,10 @@ q2sampleSD = sd(puma_labor)
 #calculate sd from sample average 
 numSDofX = (extremeValue - q2SampleMean) / q2sampleSD
 print(numSDofX)
+
 ```
+
+
 The most extreme value in the sample is approximately 2.18 standard deviations away from the sample mean. This means that this value deviates from the average by a bit more than twice the standard deviation of the sample.
 ---
 
@@ -119,6 +121,7 @@ The P value.
 pValue = q2TestResult$p.value
 pValue
 ```
+
 
 ---
 Your conclusion.
