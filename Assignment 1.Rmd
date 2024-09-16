@@ -92,7 +92,7 @@ q2sampleSD = sd(puma_labor)
 
 #calculate sd from sample average 
 numSDofX = (extremeValue - q2SampleMean) / q2sampleSD
-numSDofX
+print(numSDofX)
 ```
 The most extreme value in the sample is approximately 2.18 standard deviations away from the sample mean. This means that this value deviates from the average by a bit more than twice the standard deviation of the sample.
 ---
