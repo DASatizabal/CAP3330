@@ -1,0 +1,56 @@
+---
+title: "Assignment 2 Group 5"
+Authors: Daniel Sanchez, David Satizabal, Roland Williams
+Date: "September 28, 2024"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+A medical researcher conjectures that the likelihood of having wrinkled skin around the eyes increases when a person smokes. The smoking habits as well as the presence of prominent wrinkles around the eyes were recorded for 500 randomly selected people from the population of interest. The following frequency table is obtained:
+
+
+a) Conduct a test to find out if someone’s smoking habits are associated with the presence of skin wrinkles. Use alpha= 0.05. You must follow these steps to conduct this test:
+
+a1) State the hypotheses (Ho and Ha). 
+
+---
+Null Hypothesis (H₀): Smoking habits and the presence of prominent skin wrinkles are independent; there is no association between smoking habits and skin wrinkles.
+
+Alternative Hypothesis (Hₐ): Smoking habits and the presence of prominent skin wrinkles are not independent; there is an association between smoking habits and skin wrinkles.
+
+---
+
+# Create a matrix of observed frequencies
+```{r}
+observed = matrix(c(95, 75, 66, 55, 75, 134), nrow = 3)
+rownames(observed) = c("Heavy Smoker", "Light Smoker", "Non-Smoker")
+colnames(observed) = c("Prominent Wrinkles", "Wrinkles Not Prominent")
+print("Observed Frequencies:")
+print(observed)
+```
+
+
+# Perform the chi-square test
+```{r}
+chi_sq_test = chisq.test(observed)
+```
+
+
+# Display the test results
+```{r}
+print("Chi-Square Test Results:")
+print(chi_sq_test)
+```
+
+
+a2) Whether you reject or fail to reject Ho and why.
+---
+Since the p-value (9.3267×10^−8) is much less than the significance level (α=0.05), we reject the null hypothesis H0.
+---
+
+a3) Your conclusion (i.e., whether smoking is associated with having wrinkles).
+
+---
+Based on the chi-square test performed in R, we have sufficient evidence at the α=0.05 significance level to conclude that smoking habits are associated with the presence of skin wrinkles. Therefore, smoking is associated with having wrinkles around the eyes.
+---
